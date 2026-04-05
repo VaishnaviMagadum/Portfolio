@@ -5,6 +5,8 @@ A high-end, futuristic developer portfolio designed as an interactive AI Dashboa
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FVaishnaviMagadum%2FPortfolio&root-directory=client)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/VaishnaviMagadum/Portfolio)
 
+🚀 **Live Portfolio**: [https://vaishnavi-ai-dashboard.vercel.app](https://vaishnavi-ai-dashboard.vercel.app)
+
 ![Portfolio Preview](client/public/profile.png) 
 
 ## 🛠️ Tech Stack
