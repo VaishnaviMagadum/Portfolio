@@ -1,5 +1,6 @@
 import { createIcons, icons } from 'lucide';
 import axios from 'axios';
+import { API_BASE_URL } from '../utils/apiConfig';
 
 export const Contact = () => {
   const container = document.createElement('div');
@@ -85,7 +86,7 @@ export const Contact = () => {
         };
 
         try {
-          await axios.post('http://localhost:5000/api/contact', data);
+          await axios.post(`${API_BASE_URL}/api/contact`, data);
           container.querySelector('#contact-form-container').innerHTML = `
             <div class="h-full flex flex-col items-center justify-center text-center py-24 animate-fade-in space-y-10">
                <div class="relative">

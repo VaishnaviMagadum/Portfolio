@@ -8,7 +8,7 @@ const staticProjects = [
     tech: ['PHP_8', 'MYSQL_DB', 'ADMIN_UX', 'SYSTEM_LOGIC'], 
     icon: 'ticket',
     image: '/projects/park_ticket.jpg',
-    link: 'http://localhost/Portfolio/projects/park-ticketing/Park_Ticketing_System/main.php',
+    link: '/projects/park_ticket.jpg', // Placeholder for now, as local PHP won't work on Vercel
     status: 'STABLE'
   },
   { 

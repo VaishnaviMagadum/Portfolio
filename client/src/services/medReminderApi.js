@@ -1,4 +1,6 @@
-const BASE_URL = 'http://localhost:5000'; // Default to localhost port 5000
+import { API_BASE_URL } from '../utils/apiConfig';
+
+const BASE_URL = API_BASE_URL; // Uses utility for local/prod switching
 const API_URL = `${BASE_URL}/api`;
 
 export const medReminderApi = {
@@ -74,7 +76,7 @@ export const medReminderApi = {
 
     async checkStatus() {
         try {
-            const response = await fetch(`${BASE_URL}/`, { method: 'GET', mode: 'cors' });
+            const response = await fetch(`${API_BASE_URL}/`, { method: 'GET', mode: 'cors' });
             return response.ok;
         } catch (e) {
             return false;
