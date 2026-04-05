@@ -10,9 +10,9 @@ services:
       - key: PORT
         value: 10000
       - key: MONGODB_URI
-        sync: true
+        sync: false
       - key: GEMINI_API_KEY
-        sync: true
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: FRONTEND_URL
