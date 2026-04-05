@@ -1,0 +1,114 @@
+.placement-ai-app {
+    --pa-primary: #4f46e5;
+    --pa-secondary: #2563eb;
+    --pa-bg-gradient: linear-gradient(135deg, #eef2ff, #f8fafc, #e0e7ff, #f0f5ff);
+    
+    min-height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    color: #1e293b;
+}
+
+.placement-ai-app .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.placement-ai-app h2 { color: var(--pa-primary); text-align: center; margin-bottom: 2rem; font-size: 2rem; font-weight: 800; }
+.placement-ai-app h3 { color: var(--pa-primary); margin-bottom: 1rem; font-weight: 700; }
+
+.placement-ai-app .card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.placement-ai-app label { display: block; margin-top: 1rem; font-weight: 600; font-size: 0.9rem; }
+.placement-ai-app input, 
+.placement-ai-app textarea, 
+.placement-ai-app select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-top: 0.5rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.placement-ai-app input:focus { border-color: var(--pa-primary); }
+
+.placement-ai-app .btn-pa {
+    background: linear-gradient(90deg, var(--pa-primary), var(--pa-secondary));
+    color: white;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.placement-ai-app .btn-pa:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.placement-ai-app .company-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    border: 1px solid #f1f5f9;
+}
+
+.placement-ai-app table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
+
+.placement-ai-app th, 
+.placement-ai-app td {
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+.placement-ai-app th {
+    background: var(--pa-primary);
+    color: white;
+}
+
+@keyframes paFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.placement-ai-app .animate-pa {
+    animation: paFadeIn 0.5s ease forwards;
+}
+
+.placement-ai-app #timer {
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+    background: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    color: #ef4444;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+}

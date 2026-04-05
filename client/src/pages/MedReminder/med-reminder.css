@@ -1,0 +1,179 @@
+/* Scoped styles for the Medicine Remainder App */
+.med-reminder-app {
+    --med-primary: #818cf8;
+    --med-primary-soft: #e0e7ff;
+    --med-accent-pink: #fda4af;
+    --med-accent-blue: #7dd3fc;
+    --med-accent-mint: #6ee7b7;
+    --med-bg-main: #fcfcfd;
+    --med-text-main: #1e293b;
+    --med-text-muted: #64748b;
+    --med-glass: rgba(255, 255, 255, 0.9);
+    --med-glass-border: rgba(241, 245, 249, 0.8);
+    --med-shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    --med-shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --med-shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.04);
+    
+    background: var(--med-bg-main);
+    color: var(--med-text-main);
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.med-reminder-app * {
+    box-sizing: border-box;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.med-reminder-app .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Animations */
+@keyframes medFadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes medFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.med-reminder-app .animate-float {
+    animation: medFloat 4s ease-in-out infinite;
+}
+
+.med-reminder-app .fade-in-page {
+    animation: medFadeInUp 1s ease-out forwards;
+}
+
+/* Cards */
+.med-reminder-app .card {
+    background: var(--med-glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--med-glass-border);
+    border-radius: 2rem;
+    padding: 2.5rem;
+    box-shadow: var(--med-shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.med-reminder-app .auth-container {
+    max-width: 400px;
+    margin: 4rem auto;
+}
+
+.med-reminder-app .brand-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #0ea5e9, #10b981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+/* Carousel */
+.med-reminder-app .carousel-container {
+    position: relative;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    box-shadow: var(--med-shadow-lg);
+    height: 400px;
+    margin-bottom: 3rem;
+}
+
+.med-reminder-app .carousel-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.med-reminder-app .carousel-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 3rem;
+}
+
+/* Forms */
+.med-reminder-app .form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.med-reminder-app label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.med-reminder-app input,
+.med-reminder-app select {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border-radius: 0.875rem;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    outline: none;
+}
+
+.med-reminder-app input:focus {
+    border-color: var(--med-primary);
+}
+
+/* Items Grid */
+.med-reminder-app .med-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.med-reminder-app .medicine-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+}
+
+.med-reminder-app .btn-delete {
+    background: #fee2e2;
+    color: #ef4444;
+    width: auto;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+}
+
+.med-reminder-app .hidden {
+    display: none !important;
+}
+
+/* Stats */
+.med-reminder-app .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.med-reminder-app .stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    border: 1px solid #f1f5f9;
+}
+
+.med-reminder-app .stat-value {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--med-primary);
+}
