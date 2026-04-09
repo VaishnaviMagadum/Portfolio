@@ -1,6 +1,6 @@
 # 🚀 AI Dashboard Portfolio | Vaishnavi Magadum
 
-A high-end, futuristic developer portfolio designed as an interactive AI Dashboard. Built with the MERN stack, this project features glassmorphism, spatial UI elements, and a dynamic GitHub repository showcase.
+A high-end, futuristic developer portfolio designed as an interactive AI Dashboard. This project features glassmorphism, spatial UI elements, and a dynamic GitHub repository showcase.
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FVaishnaviMagadum%2FPortfolio&root-directory=client)
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/VaishnaviMagadum/Portfolio)
