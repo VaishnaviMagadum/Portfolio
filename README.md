@@ -14,7 +14,7 @@ A high-end, futuristic developer portfolio designed as an interactive AI Dashboa
 - **Frontend**: React.js, Vanilla CSS, Lucide Icons, Glassmorphism
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB, MySQL
-- **Design**: "Vivek-style" Bento Grid, Minimalist Spatial UI, Scanline Effects
+- **Design**: Bento Grid, Minimalist Spatial UI, Scanline Effects
 
 ---
 
