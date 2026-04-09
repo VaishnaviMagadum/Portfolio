@@ -71,7 +71,7 @@ export const Home = () => {
   setTimeout(() => {
     // Typewriter effect
     const textElement = container.querySelector('.typewriter-text');
-    const words = ["Full Stack Developer", "Web Developer"];
+    const words = ["Full Stack Developer", "Web Developer", "Front End Developer"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

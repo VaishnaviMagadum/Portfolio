@@ -48,7 +48,7 @@ export const About = () => {
               </div>
               <div class="p-4 glass-dashboard border-white/5 col-span-2">
                  <div class="text-accent-cyan mb-1">CORE_STACK:</div>
-                 <div class="text-white uppercase">MERN / JAVA / PYTHON / SQL</div>
+                 <div class="text-white uppercase">JAVA / PYTHON / SQL</div>
               </div>
            </div>
         </div>
