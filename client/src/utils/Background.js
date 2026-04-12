@@ -10,8 +10,9 @@ export class Starfield {
     
     this.ctx = this.canvas.getContext('2d');
     this.nodes = [];
-    this.count = window.innerWidth < 768 ? 60 : 120; // Node count based on device
-    this.connectionDist = 150;
+    this.isMobile = window.innerWidth < 768;
+    this.count = this.isMobile ? 40 : 120; // Lower node count for mobile
+    this.connectionDist = this.isMobile ? 100 : 150; // Shorter lines on mobile
     this.mouseX = 0;
     this.mouseY = 0;
     this.hue = 210;

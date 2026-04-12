@@ -39,47 +39,47 @@ export const Projects = () => {
 
   const updateContent = (repos = []) => {
     container.innerHTML = `
-      <div class="container mx-auto px-6 relative z-10 py-32">
-        <div class="flex flex-col items-center text-center mb-32 space-y-4">
-           <h2 class="text-6xl md:text-8xl font-mono font-black tracking-tighter leading-none text-white overflow-hidden">
-              <span class="block text-hologram">Latest Projects</span>
+      <div class="container mx-auto px-4 sm:px-6 relative z-10 py-16 sm:py-32">
+        <div class="flex flex-col items-center text-center mb-16 sm:mb-32 space-y-4">
+           <h2 class="text-4xl sm:text-6xl md:text-8xl font-mono font-black tracking-tighter leading-none text-white overflow-hidden">
+              <span class="block text-hologram whitespace-nowrap">Latest Projects</span>
            </h2>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-12 max-w-6xl mx-auto">
            ${staticProjects.map(project => `
                <div class="group glass-dashboard neon-border p-1 hover:scale-[1.02] transition-all duration-500">
-                 <div class="p-8 space-y-6 relative z-10">
+                 <div class="p-4 sm:p-8 space-y-4 sm:space-y-6 relative z-10">
                     <div class="flex justify-between items-start">
-                       <div class="w-12 h-12 rounded-xl bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center text-accent-cyan group-hover:bg-accent-cyan group-hover:text-slate-950 transition-all duration-500">
-                          <i data-lucide="${project.icon || 'layers'}" class="w-6 h-6"></i>
+                       <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center text-accent-cyan group-hover:bg-accent-cyan group-hover:text-slate-950 transition-all duration-500">
+                          <i data-lucide="${project.icon || 'layers'}" class="w-5 h-5 sm:w-6 sm:h-6"></i>
                        </div>
-                       <div class="text-[9px] font-mono font-bold text-slate-500 flex items-center gap-2">
+                       <div class="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 flex items-center gap-2">
                           STATUS: <span class="${project.status === 'OPERATIONAL' ? 'text-accent-cyan' : 'text-accent-purple'}">${project.status}</span>
                        </div>
                     </div>
 
-                    <div class="space-y-3">
-                       <h3 class="text-2xl font-mono font-bold text-white group-hover:text-accent-cyan transition-colors">${project.title}</h3>
-                       <p class="text-[11px] font-mono font-medium text-slate-400 leading-relaxed h-12 overflow-hidden opacity-80">
+                    <div class="space-y-2 sm:space-y-3">
+                       <h3 class="text-lg sm:text-2xl font-mono font-bold text-white group-hover:text-accent-cyan transition-colors line-clamp-1">${project.title}</h3>
+                       <p class="text-[10px] sm:text-[11px] font-mono font-medium text-slate-400 leading-relaxed h-12 overflow-hidden opacity-80">
                          ${project.desc}
                        </p>
                     </div>
 
-                    <div class="flex flex-wrap gap-2 py-4">
-                       ${project.tech.map(t => `<span class="px-2 py-1 bg-white/5 border border-white/5 rounded text-[8px] font-mono font-bold text-slate-500 group-hover:border-accent-cyan/30 group-hover:text-accent-cyan transition-all">${t}</span>`).join('')}
+                    <div class="flex flex-wrap gap-1.5 sm:gap-2 py-2 sm:py-4">
+                       ${project.tech.map(t => `<span class="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-white/5 border border-white/5 rounded text-[7px] sm:text-[8px] font-mono font-bold text-slate-500 group-hover:border-accent-cyan/30 group-hover:text-accent-cyan transition-all">${t}</span>`).join('')}
                     </div>
 
-                    <div class="relative aspect-video rounded-2xl overflow-hidden border border-white/5 group-hover:border-accent-cyan/30 transition-all duration-500">
+                    <div class="relative aspect-video rounded-xl sm:rounded-2xl overflow-hidden border border-white/5 group-hover:border-accent-cyan/30 transition-all duration-500">
                        <img src="${project.image}" 
                             alt="${project.title}" 
                             onerror="this.src= '${project.title.includes('PARK') ? 'https://images.unsplash.com/photo-1513889959010-683a37c4ed44?auto=format&fit=crop&q=80&w=800' : '/projects/placeholder.png'}'; this.onerror=null;"
                             class="w-full h-full object-cover">
-                       <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent"></div>
+                       <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
                     </div>
 
-                    <div class="flex items-center justify-between pt-4">
-                       <a href="${project.link}" target="_blank" class="flex items-center gap-2 text-[10px] font-mono font-bold text-accent-cyan hover:tracking-widest transition-all">
+                    <div class="flex items-center justify-between pt-2 sm:pt-4">
+                       <a href="${project.link}" target="_blank" class="flex items-center gap-2 text-[9px] sm:text-[10px] font-mono font-bold text-accent-cyan hover:tracking-widest transition-all">
                           View Project <i data-lucide="external-link" class="w-3 h-3"></i>
                        </a>
                     </div>
@@ -88,26 +88,26 @@ export const Projects = () => {
            `).join('')}
         </div>
 
-        <div id="github-module" class="mt-40 pt-20 border-t border-white/5 w-full">
-            <div class="flex flex-col items-center text-center mb-24 space-y-4">
-               <div class="text-[10px] font-mono font-bold text-accent-cyan uppercase tracking-widest">Open Source</div>
-               <h3 class="text-4xl font-mono font-bold text-white">GitHub Contributions</h3>
+        <div id="github-module" class="mt-20 sm:mt-40 pt-10 sm:pt-20 border-t border-white/5 w-full">
+            <div class="flex flex-col items-center text-center mb-12 sm:mb-24 space-y-2 sm:space-y-4">
+               <div class="text-[9px] sm:text-[10px] font-mono font-bold text-accent-cyan uppercase tracking-widest">Open Source</div>
+               <h3 class="text-2xl sm:text-4xl font-mono font-bold text-white">GitHub Contributions</h3>
             </div>
             
-            <div id="repo-grid" class="max-w-5xl mx-auto">
+            <div id="repo-grid" class="max-w-5xl mx-auto px-2">
                ${repos.length > 0 ? `
-               <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+               <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                    ${repos.map(repo => `
-                       <a href="${repo.html_url}" target="_blank" class="glass-dashboard p-6 hover:bg-white/5 transition-all duration-300 group neon-border">
+                       <a href="${repo.html_url}" target="_blank" class="glass-dashboard p-4 sm:p-6 hover:bg-white/5 transition-all duration-300 group neon-border">
                            <div class="flex items-center justify-between mb-4">
-                              <i data-lucide="github" class="w-5 h-5 text-slate-500 group-hover:text-accent-cyan transition-colors"></i>
-                              <span class="text-[8px] font-mono font-bold text-slate-600">${repo.language?.toUpperCase() || 'DATA'}</span>
+                              <i data-lucide="github" class="w-4 h-4 sm:w-5 sm:h-5 text-slate-500 group-hover:text-accent-cyan transition-colors"></i>
+                              <span class="text-[7px] sm:text-[8px] font-mono font-bold text-slate-600">${repo.language?.toUpperCase() || 'DATA'}</span>
                            </div>
-                           <h4 class="text-sm font-mono font-bold text-white mb-2 truncate">${repo.name.toUpperCase()}</h4>
+                           <h4 class="text-xs sm:text-sm font-mono font-bold text-white mb-2 truncate">${repo.name.toUpperCase()}</h4>
                        </a>
                    `).join('')}
                </div>
-               ` : '<div class="text-center text-slate-500 font-mono text-xs">Synchronizing with GitHub Database...</div>'}
+               ` : '<div class="text-center text-slate-500 font-mono text-[10px] sm:text-xs">Synchronizing with GitHub Database...</div>'}
             </div>
         </div>
       </div>

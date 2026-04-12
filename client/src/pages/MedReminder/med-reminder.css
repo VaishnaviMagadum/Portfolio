@@ -28,18 +28,18 @@
 .med-reminder-app .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 1rem sm:2rem;
 }
 
 /* Animations */
 @keyframes medFadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes medFloat {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-10px); }
     100% { transform: translateY(0px); }
 }
 
@@ -48,7 +48,7 @@
 }
 
 .med-reminder-app .fade-in-page {
-    animation: medFadeInUp 1s ease-out forwards;
+    animation: medFadeInUp 0.8s ease-out forwards;
 }
 
 /* Cards */
@@ -56,8 +56,8 @@
     background: var(--med-glass);
     backdrop-filter: blur(20px);
     border: 1px solid var(--med-glass-border);
-    border-radius: 2rem;
-    padding: 2.5rem;
+    border-radius: 1.5rem sm:2rem;
+    padding: 1.5rem sm:2.5rem;
     box-shadow: var(--med-shadow-md);
     position: relative;
     overflow: hidden;
@@ -65,11 +65,12 @@
 
 .med-reminder-app .auth-container {
     max-width: 400px;
-    margin: 4rem auto;
+    margin: 2rem auto sm:4rem auto;
+    padding: 0 1rem;
 }
 
 .med-reminder-app .brand-title {
-    font-size: 2.75rem;
+    font-size: clamp(2rem, 8vw, 2.75rem);
     font-weight: 800;
     background: linear-gradient(to right, #0ea5e9, #10b981);
     -webkit-background-clip: text;
@@ -82,11 +83,12 @@
 /* Carousel */
 .med-reminder-app .carousel-container {
     position: relative;
-    border-radius: 2.5rem;
+    border-radius: 1.5rem sm:2.5rem;
     overflow: hidden;
     box-shadow: var(--med-shadow-lg);
-    height: 400px;
-    margin-bottom: 3rem;
+    height: auto;
+    min-height: 350px;
+    margin-bottom: 2rem sm:3rem;
 }
 
 .med-reminder-app .carousel-track {
@@ -97,35 +99,36 @@
 
 .med-reminder-app .carousel-slide {
     flex: 0 0 100%;
-    height: 100%;
+    min-height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 3rem;
+    padding: 1rem sm:3rem;
 }
 
 /* Forms */
 .med-reminder-app .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem sm:1.25rem;
     text-align: left;
 }
 
 .med-reminder-app label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem sm:0.9rem;
 }
 
 .med-reminder-app input,
 .med-reminder-app select {
     width: 100%;
-    padding: 0.875rem 1.25rem;
-    border-radius: 0.875rem;
+    padding: 0.75rem 1rem sm:0.875rem 1.25rem;
+    border-radius: 0.75rem sm:0.875rem;
     background: #ffffff;
     border: 2px solid #e2e8f0;
     outline: none;
+    font-size: 16px; /* Prevent iOS zoom */
 }
 
 .med-reminder-app input:focus {

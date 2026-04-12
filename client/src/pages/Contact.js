@@ -7,33 +7,33 @@ export const Contact = () => {
   container.className = 'relative overflow-hidden w-full';
   
   container.innerHTML = `
-    <div class="container mx-auto px-6 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-24 items-start">
-        <div class="lg:col-span-12 space-y-24">
+    <div class="container mx-auto px-4 sm:px-6 relative z-10 py-12 sm:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 sm:gap-24 items-start">
+        <div class="lg:col-span-12 space-y-16 sm:space-y-24">
            <div class="text-center animate-slide-up">
-              <div class="text-xs font-black uppercase tracking-[0.4em] text-accent-blue mb-6 px-2 border-l-2 border-accent-blue inline-block">Contact</div>
-              <h2 class="text-6xl md:text-8xl font-display font-extrabold mb-10 tracking-tighter leading-none text-text-primary">Connect <br /> With <span class="text-gradient">Me</span>.</h2>
-              <p class="text-xl text-text-secondary max-w-2xl mx-auto font-medium leading-relaxed opacity-60">Feel free to reach out for collaborations, job opportunities, or just to say hi!</p>
+              <div class="text-[10px] sm:text-xs font-black uppercase tracking-[0.3em] sm:tracking-[0.4em] text-accent-blue mb-4 sm:mb-6 px-2 border-l-2 border-accent-blue inline-block">Contact</div>
+              <h2 class="text-4xl sm:text-6xl md:text-8xl font-display font-extrabold mb-6 sm:mb-10 tracking-tighter leading-none text-text-primary">Connect <br class="sm:hidden" /> With <span class="text-gradient">Me</span>.</h2>
+              <p class="text-base sm:text-xl text-text-secondary max-w-2xl mx-auto font-medium leading-relaxed opacity-60 px-4">Feel free to reach out for collaborations, job opportunities, or just to say hi!</p>
            </div>
 
-           <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
-              <div class="lg:col-span-5 space-y-16 animate-slide-up">
-                  <div class="space-y-8">
-                     <h3 class="text-sm font-black uppercase tracking-[0.3em] text-text-secondary/40">Digital Footprint</h3>
-                     <div class="grid grid-cols-2 gap-6">
+           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+              <div class="lg:col-span-5 space-y-10 sm:space-y-16 animate-slide-up">
+                  <div class="space-y-6 sm:space-y-8">
+                     <h3 class="text-xs sm:text-sm font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-text-secondary/40 text-center lg:text-left">Digital Footprint</h3>
+                     <div class="grid grid-cols-2 gap-4 sm:gap-6">
                         ${[
                           { logo: 'https://skillicons.dev/icons?i=linkedin', label: 'LinkedIn', value: 'Vaishnavi M.', url: 'https://www.linkedin.com/in/vaishnavi-magadum-60a08633a' },
                           { logo: 'https://skillicons.dev/icons?i=github', label: 'GitHub', value: 'VaishnaviMagadum', url: 'https://github.com/VaishnaviMagadum' },
                           { logo: 'https://skillicons.dev/icons?i=instagram', label: 'Instagram', value: 'vaish_magadum', url: 'https://instagram.com/vaish_magadum' },
                           { logo: 'https://skillicons.dev/icons?i=gmail', label: 'Email', value: 'vaishnavimagadum04@gmail.com', url: 'mailto:vaishnavimagadum04@gmail.com' }
                         ].map(social => `
-                           <a href="${social.url}" target="_blank" class="glass-card p-10 rounded-[3.5rem] flex flex-col items-center justify-center gap-6 group hover:-translate-y-2 hover:bg-white/[0.02] transition-all duration-300">
-                              <div class="w-16 h-16 rounded-2xl bg-white/5 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                                 <img src="${social.logo}" alt="${social.label}" class="w-8 h-8 object-contain drop-shadow-md" />
+                           <a href="${social.url}" target="_blank" class="glass-card p-6 sm:p-10 rounded-[2.5rem] sm:rounded-[3.5rem] flex flex-col items-center justify-center gap-4 sm:gap-6 group hover:-translate-y-2 hover:bg-white/[0.02] transition-all duration-300">
+                              <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                 <img src="${social.logo}" alt="${social.label}" class="w-6 h-6 sm:w-8 sm:h-8 object-contain drop-shadow-md" />
                               </div>
-                              <div class="text-center">
-                                 <span class="block text-[10px] font-black uppercase tracking-widest text-text-secondary/30 mb-2">${social.label}</span>
-                                 <span class="text-xs font-bold text-text-primary transition-colors truncate max-w-[140px] block opacity-80 group-hover:opacity-100">${social.value}</span>
+                              <div class="text-center w-full overflow-hidden">
+                                 <span class="block text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-text-secondary/30 mb-1 sm:mb-2">${social.label}</span>
+                                 <span class="text-[10px] sm:text-xs font-bold text-text-primary transition-colors truncate w-full block opacity-80 group-hover:opacity-100">${social.value}</span>
                               </div>
                            </a>
                         `).join('')}
@@ -41,23 +41,23 @@ export const Contact = () => {
                   </div>
               </div>
 
-              <div id="contact-form-container" class="lg:col-span-7 glass-card p-12 sm:p-20 rounded-[4.5rem] border-white/5 animate-fade-in relative group overflow-hidden">
+              <div id="contact-form-container" class="lg:col-span-7 glass-card p-6 sm:p-12 md:p-20 rounded-[3rem] sm:rounded-[4.5rem] border-white/5 animate-fade-in relative group overflow-hidden mx-2 sm:mx-0">
                  <div class="absolute inset-0 bg-grid opacity-10"></div>
-                 <form id="contact-form" class="space-y-8 relative z-10">
-                   <div class="space-y-3">
-                      <label class="text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-6">Full Identity</label>
-                      <input required type="text" name="name" placeholder="Johnathan Doe" class="w-full glass bg-slate-900/50 border-white/10 rounded-[2.5rem] px-10 py-6 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-xl text-text-primary" />
+                 <form id="contact-form" class="space-y-6 sm:space-y-8 relative z-10">
+                   <div class="space-y-2 sm:space-y-3">
+                      <label class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-4 sm:ml-6">Full Identity</label>
+                      <input required type="text" name="name" placeholder="Johnathan Doe" class="w-full glass bg-slate-900/50 border-white/10 rounded-[1.5rem] sm:rounded-[2.5rem] px-6 sm:px-10 py-4 sm:py-6 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-lg sm:text-xl text-text-primary" />
                    </div>
-                   <div class="space-y-3">
-                      <label class="text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-6">Return Address</label>
-                      <input required type="email" name="email" placeholder="john@domain.com" class="w-full glass bg-slate-900/50 border-white/10 rounded-[2.5rem] px-10 py-6 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-xl text-text-primary" />
+                   <div class="space-y-2 sm:space-y-3">
+                      <label class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-4 sm:ml-6">Return Address</label>
+                      <input required type="email" name="email" placeholder="john@domain.com" class="w-full glass bg-slate-900/50 border-white/10 rounded-[1.5rem] sm:rounded-[2.5rem] px-6 sm:px-10 py-4 sm:py-6 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-lg sm:text-xl text-text-primary" />
                    </div>
-                   <div class="space-y-3">
-                      <label class="text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-6">The Requirement</label>
-                      <textarea required name="message" rows="6" placeholder="Describe your digital engineering goals..." class="w-full glass bg-slate-900/50 border-white/10 rounded-[3.5rem] px-10 py-8 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-xl text-text-primary resize-none"></textarea>
+                   <div class="space-y-2 sm:space-y-3">
+                      <label class="text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] text-text-secondary/40 ml-4 sm:ml-6">The Requirement</label>
+                      <textarea required name="message" rows="5" placeholder="Describe your digital engineering goals..." class="w-full glass bg-slate-900/50 border-white/10 rounded-[2rem] sm:rounded-[3.5rem] px-6 sm:px-10 py-5 sm:py-8 focus:outline-none focus:ring-2 focus:ring-accent-blue/30 transition-all font-bold placeholder:text-text-secondary/20 text-lg sm:text-xl text-text-primary resize-none"></textarea>
                    </div>
-                   <button type="submit" id="submit-btn" class="w-full py-8 bg-accent-blue hover:bg-blue-600 text-white rounded-[2.5rem] font-black text-2xl uppercase tracking-widest flex items-center justify-center gap-5 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_30px_60px_-15px_rgba(59,130,246,0.4)]">
-                     Establish Connection <i data-lucide="send" class="w-8 h-8"></i>
+                   <button type="submit" id="submit-btn" class="w-full py-5 sm:py-8 bg-accent-blue hover:bg-blue-600 text-white rounded-[1.5rem] sm:rounded-[2.5rem] font-black text-xl sm:text-2xl uppercase tracking-widest flex items-center justify-center gap-3 sm:gap-5 transition-all hover:scale-[1.02] active:scale-95 shadow-[0_20px_40px_-10px_rgba(59,130,246,0.3)]">
+                     Send Message <i data-lucide="send" class="w-6 h-6 sm:w-8 sm:h-8"></i>
                    </button>
                  </form>
               </div>

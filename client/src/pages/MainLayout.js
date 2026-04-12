@@ -45,9 +45,9 @@ export const MainLayout = async () => {
     });
 
     // Make sections stack nicely
-    aboutSection.classList.add('py-20');
-    projectsSection.classList.add('py-20');
-    contactSection.classList.add('py-20');
+    aboutSection.classList.add('py-12', 'sm:py-24');
+    projectsSection.classList.add('py-12', 'sm:py-24');
+    contactSection.classList.add('py-12', 'sm:py-24');
 
     sectionsWrap.appendChild(homeSection);
     sectionsWrap.appendChild(aboutSection);

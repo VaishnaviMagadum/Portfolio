@@ -19,39 +19,39 @@ export const MedReminderDashboard = () => {
         }
 
         container.innerHTML = `
-            <div class="container fade-in-page">
-                <header class="flex justify-between items-center mb-12">
+            <div class="container fade-in-page px-4 sm:px-8">
+                <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-8 sm:mb-12">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-indigo-500 rounded-xl flex items-center justify-center font-bold text-2xl text-white shadow-lg">M</div>
-                        <h2 class="text-2xl font-extrabold tracking-tight text-slate-800">MedReminder</h2>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 bg-indigo-500 rounded-xl flex items-center justify-center font-bold text-xl sm:text-2xl text-white shadow-lg">M</div>
+                        <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-800">MedReminder</h2>
                     </div>
-                    <div class="flex items-center gap-6">
-                        <span class="text-slate-500 font-semibold underline underline-offset-4">Hello, ${state.username}</span>
-                        <button id="med-logout-btn" class="bg-slate-100 px-6 py-2 rounded-xl font-bold hover:bg-slate-200 transition-all">Logout</button>
+                    <div class="flex flex-row items-center justify-between w-full sm:w-auto gap-4 sm:gap-6">
+                        <span class="text-xs sm:text-sm text-slate-500 font-semibold underline underline-offset-4">Hello, ${state.username}</span>
+                        <button id="med-logout-btn" class="bg-slate-100 px-4 sm:px-6 py-2 rounded-xl text-xs sm:text-sm font-bold hover:bg-slate-200 transition-all">Logout</button>
                     </div>
                 </header>
 
                 <!-- Carousel -->
-                <div class="carousel-container">
+                <div class="carousel-container h-auto sm:h-[400px]">
                     <div class="carousel-viewport">
                         <div class="carousel-track" id="med-carousel-track">
                             <div class="carousel-slide bg-indigo-600">
-                                <div class="slide-content flex items-center justify-around w-full max-w-4xl px-12">
-                                    <img src="/assets/med-reminder/pill.png" class="w-48 h-48 drop-shadow-2xl animate-float">
-                                    <div class="text-white">
-                                        <h2 class="text-4xl font-extrabold mb-4">Keep Track</h2>
-                                        <p class="text-xl opacity-90 mb-6">Of all medications you take daily.</p>
-                                        <button class="bg-white text-indigo-600 px-8 py-3 rounded-2xl font-bold shadow-xl" id="open-add-med">Add Medicine</button>
+                                <div class="slide-content flex flex-col sm:flex-row items-center justify-center sm:justify-around w-full max-w-4xl px-6 sm:px-12 py-10 sm:py-0 gap-8 sm:gap-0">
+                                    <img src="/assets/med-reminder/pill.png" class="w-24 h-24 sm:w-48 sm:h-48 drop-shadow-2xl animate-float">
+                                    <div class="text-white text-center sm:text-left">
+                                        <h2 class="text-2xl sm:text-4xl font-extrabold mb-2 sm:mb-4">Keep Track</h2>
+                                        <p class="text-sm sm:text-xl opacity-90 mb-4 sm:mb-6">Of all medications you take daily.</p>
+                                        <button class="bg-white text-indigo-600 px-6 sm:px-8 py-2 sm:py-3 rounded-2xl font-bold shadow-xl text-xs sm:text-base" id="open-add-med">Add Medicine</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-slide bg-emerald-600">
-                                <div class="slide-content flex items-center justify-around w-full max-w-4xl px-12">
-                                    <img src="/assets/med-reminder/bottle.png" class="w-48 h-48 drop-shadow-2xl animate-float">
-                                    <div class="text-white">
-                                        <h2 class="text-4xl font-extrabold mb-4">Stay Healthy</h2>
-                                        <p class="text-xl opacity-90 mb-6">Never miss a dose with smart alerts.</p>
-                                        <button class="bg-white text-emerald-600 px-8 py-3 rounded-2xl font-bold shadow-xl" id="open-health-profile">Check Profile</button>
+                                <div class="slide-content flex flex-col sm:flex-row items-center justify-center sm:justify-around w-full max-w-4xl px-6 sm:px-12 py-10 sm:py-0 gap-8 sm:gap-0">
+                                    <img src="/assets/med-reminder/bottle.png" class="w-24 h-24 sm:w-48 sm:h-48 drop-shadow-2xl animate-float">
+                                    <div class="text-white text-center sm:text-left">
+                                        <h2 class="text-2xl sm:text-4xl font-extrabold mb-2 sm:mb-4">Stay Healthy</h2>
+                                        <p class="text-sm sm:text-xl opacity-90 mb-4 sm:mb-6">Never miss a dose with smart alerts.</p>
+                                        <button class="bg-white text-emerald-600 px-6 sm:px-8 py-2 sm:py-3 rounded-2xl font-bold shadow-xl text-xs sm:text-base" id="open-health-profile">Check Profile</button>
                                     </div>
                                 </div>
                             </div>

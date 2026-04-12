@@ -16,10 +16,11 @@ export const Navbar = () => {
     const themeIcon = themeIconMap[currentTheme] || 'sun';
     
     navContainer.innerHTML = `
-      <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] max-w-7xl transition-all duration-500">
-        <div class="glass-dashboard h-16 px-6 sm:px-10 flex justify-between items-center group">
+    navContainer.innerHTML = `
+      <nav class="fixed top-2 sm:top-6 left-1/2 -translate-x-1/2 z-[100] w-[98%] sm:w-[95%] max-w-7xl transition-all duration-500">
+        <div class="glass-dashboard h-14 sm:h-16 px-4 sm:px-10 flex justify-between items-center group">
           <a href="/" class="flex items-center gap-3 group/logo">
-            <span class="text-xl sm:text-2xl font-mono font-bold tracking-tighter text-white">
+            <span class="text-lg sm:text-2xl font-mono font-bold tracking-tighter text-white whitespace-nowrap">
               Vaishnavi Magadum
             </span>
           </a>
@@ -34,7 +35,7 @@ export const Navbar = () => {
               </div>
             
             ${['Home', 'About', 'Projects', 'Contact'].map(item => `
-              <a href="${item === 'Home' ? '/#home' : '/#' + item.toLowerCase()}" class="px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:text-accent-cyan hover:bg-white/5 relative group/link text-slate-400">
+              <a href="${item === 'Home' ? '/#home' : '/#' + item.toLowerCase()}" class="px-3 lg:px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:text-accent-cyan hover:bg-white/5 relative group/link text-slate-400">
                 ${item.toUpperCase()}
               </a>
             `).join('')}
@@ -44,20 +45,20 @@ export const Navbar = () => {
             <button id="theme-switcher" class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-slate-400 group">
                <i data-lucide="${themeIcon}" class="w-4 h-4 group-hover:text-accent-cyan transition-colors"></i>
             </button>
-            
-            <a href="/#contact" class="flex items-center gap-2 px-5 py-2 rounded-xl bg-accent-cyan/10 text-accent-cyan font-mono font-bold text-[10px] uppercase tracking-widest hover:bg-accent-cyan/20 transition-all border border-accent-cyan/30 neon-border">
-              Contact
-            </a>
           </div>
 
-            <button id="mobile-toggle" class="md:hidden p-2 rounded-2xl bg-white/5 hover:bg-white/10 transition-all border border-white/5 shadow-xl">
+          <div class="flex items-center gap-2 md:hidden">
+            <button id="mobile-theme-switcher-nav" class="p-2 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-slate-400">
+               <i data-lucide="${themeIcon}" class="w-4 h-4"></i>
+            </button>
+            <button id="mobile-toggle" class="p-2 rounded-xl bg-white/5 hover:bg-white/10 transition-all border border-white/5 shadow-xl text-white">
               <i data-lucide="${isMobileMenuOpen ? 'x' : 'menu'}" class="w-6 h-6"></i>
             </button>
           </div>
         </div>
 
-        <div id="mobile-menu" class="fixed inset-0 z-[-1] glass sm:mt-24 md:hidden transition-all duration-500 ${isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0 pointer-events-none'}">
-          <div class="container mx-auto px-6 pt-32 pb-12 flex flex-col gap-6">
+        <div id="mobile-menu" class="fixed inset-0 z-[-1] glass sm:mt-24 md:hidden transition-all duration-500 ${isMobileMenuOpen ? 'translate-y-0 opacity-100 backdrop-blur-3xl' : '-translate-y-full opacity-0 pointer-events-none'}">
+          <div class="container mx-auto px-6 pt-32 pb-12 flex flex-col gap-4">
             ${['Home', 'About', 'Projects', 'Contact'].map(item => `
               <a href="${item === 'Home' ? '/#home' : '/#' + item.toLowerCase()}" class="mobile-nav-link text-3xl font-display font-bold flex items-center justify-between p-4 rounded-3xl hover:bg-white/5 group border border-transparent hover:border-white/5">
                 ${item}
@@ -71,11 +72,6 @@ export const Navbar = () => {
               <i data-lucide="briefcase" class="w-6 h-6"></i>
               Hire Me
             </a>
-
-            <button id="mobile-theme-switcher" class="w-full flex items-center justify-between p-6 rounded-3xl bg-primary-500/10 border border-primary-500/20 text-primary-400 group mt-4">
-              <span class="text-xl font-bold">Switch Theme</span>
-              <i data-lucide="${themeIcon}" class="w-8 h-8"></i>
-            </button>
           </div>
         </div>
       </nav>
@@ -86,7 +82,7 @@ export const Navbar = () => {
   };
 
   const addListeners = () => {
-    ['theme-switcher', 'mobile-theme-switcher'].forEach(id => {
+    ['theme-switcher', 'mobile-theme-switcher-nav'].forEach(id => {
       const btn = document.getElementById(id);
       if (btn) {
         btn.onclick = (e) => {
@@ -99,7 +95,8 @@ export const Navbar = () => {
 
     const toggle = document.getElementById('mobile-toggle');
     if (toggle) {
-      toggle.onclick = () => {
+      toggle.onclick = (e) => {
+        e.stopPropagation();
         isMobileMenuOpen = !isMobileMenuOpen;
         render();
       };
@@ -112,16 +109,8 @@ export const Navbar = () => {
         render();
       };
     });
-
-    window.onscroll = () => {
-      const isScrolled = window.scrollY > 30;
-      const nav = document.querySelector('nav');
-      if (nav) {
-        if (isScrolled) nav.classList.add('py-4'); else nav.classList.remove('py-4');
-        if (isScrolled) nav.classList.remove('py-8'); else nav.classList.add('py-8');
-      }
-    };
   };
+
 
   render();
 };
