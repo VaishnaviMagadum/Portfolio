@@ -1,0 +1,46 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Glow -->
+  <circle cx="200" cy="300" r="180" fill="url(#paint0_radial)" fill-opacity="0.3"/>
+  
+  <!-- Bottle Body -->
+  <rect x="110" y="240" width="180" height="220" rx="40" fill="#E0F2FE"/>
+  <rect x="110" y="300" width="180" height="100" fill="#0D9488"/> <!-- Teal Label -->
+  
+  <!-- Label Cross -->
+  <rect x="185" y="325" width="30" height="50" rx="4" fill="white"/>
+  <rect x="175" y="335" width="50" height="30" rx="4" fill="white"/>
+  
+  <!-- Bottle Neck -->
+  <rect x="160" y="210" width="80" height="30" fill="#E0F2FE"/>
+  <rect x="150" y="200" width="100" height="20" rx="10" fill="#E0F2FE"/>
+  
+  <!-- Open Cap (floating to the left) -->
+  <g transform="translate(60, 180) rotate(-30)">
+    <rect x="0" y="0" width="100" height="30" rx="10" fill="#0D9488"/>
+    <rect x="10" y="-5" width="80" height="5" rx="2" fill="#0F766E"/>
+  </g>
+  
+  <!-- Spilling Pills -->
+  <g class="animate-pills">
+    <!-- Pill 1 (Red/White) -->
+    <rect x="180" y="140" width="15" height="40" rx="7.5" fill="#EF4444"/>
+    <rect x="180" y="160" width="15" height="20" rx="0" fill="white"/>
+    
+    <!-- Pill 2 (White/Pink) -->
+    <rect x="220" y="100" width="15" height="40" rx="7.5" fill="white" transform="rotate(45, 220, 100)"/>
+    <rect x="220" y="100" width="15" height="20" rx="0" fill="#F472B6" transform="rotate(45, 220, 100)"/>
+    
+    <!-- Pill 3 (Small White Circle) -->
+    <circle cx="205" cy="190" r="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+    
+    <!-- Pill 4 (Blue Pill) -->
+    <rect x="140" y="120" width="15" height="40" rx="7.5" fill="#60A5FA" transform="rotate(-20, 140, 120)"/>
+  </g>
+  
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(200 300) rotate(90) scale(180)">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>
