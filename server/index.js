@@ -30,10 +30,14 @@ app.use(express.json());
 const contactRoutes = require('./routes/contact');
 const projectRoutes = require('./routes/projects');
 const chatRoutes = require('./routes/chat');
+const medicineRoutes = require('./routes/medicines');
+const authRoutes = require('./routes/auth');
 
 app.use('/api/contact', contactRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/medicines', medicineRoutes);
+app.use('/api/auth', authRoutes);
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/portfolio')

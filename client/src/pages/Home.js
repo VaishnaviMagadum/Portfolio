@@ -19,7 +19,11 @@ export const Home = () => {
             <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 animate-fade-in w-full" style="animation-delay: 0.2s">
                <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-slate-950/80 border border-accent-cyan/30 text-accent-cyan font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] shadow-[0_0_20px_rgba(34,211,238,0.1)]">
                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan animate-pulse"></span>
-                 FULL STACK DEVELOPER INTERN
+                 FULL STACK DEVELOPER
+               </div>
+               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-slate-950/80 border border-white/10 text-slate-300 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em]">
+                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan"></span>
+                 LOCATION: PUNE
                </div>
               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-accent-purple/10 border border-accent-purple/30 text-accent-purple font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] shadow-[0_0_20_rgba(168,85,247,0.1)]">
                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-purple animate-pulse"></span>
@@ -42,8 +46,8 @@ export const Home = () => {
              <span class="opacity-50 text-accent-cyan">]</span>
           </div>
           
-          <p class="text-xs sm:text-sm md:text-base text-slate-500 max-w-sm sm:max-w-xl leading-relaxed font-mono font-medium animate-fade-in opacity-0" style="animation-delay: 0.6s">
-             I am a CSE Engineering student at HIT and a Full Stack Developer Intern at VRIF. I am dedicated to creating seamless digital experiences and robust backend architectures.
+          <p class="text-xs sm:text-sm md:text-base text-slate-400 max-w-sm sm:max-w-2xl leading-relaxed font-mono font-medium animate-fade-in opacity-0" style="animation-delay: 0.6s">
+             Computer Science Engineering graduate (2026) from HIT and Full Stack Developer. Proficient in React.js, Node.js, Express.js, SQL, and REST APIs, passionate about building responsive web applications and scalable backend architectures.
           </p>
           
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-4 sm:pt-8 animate-fade-in opacity-0 w-full px-6" style="animation-delay: 0.8s">

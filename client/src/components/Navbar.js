@@ -16,7 +16,6 @@ export const Navbar = () => {
     const themeIcon = themeIconMap[currentTheme] || 'sun';
     
     navContainer.innerHTML = `
-    navContainer.innerHTML = `
       <nav class="fixed top-2 sm:top-6 left-1/2 -translate-x-1/2 z-[100] w-[98%] sm:w-[95%] max-w-7xl transition-all duration-500">
         <div class="glass-dashboard h-14 sm:h-16 px-4 sm:px-10 flex justify-between items-center group">
           <a href="/" class="flex items-center gap-3 group/logo">

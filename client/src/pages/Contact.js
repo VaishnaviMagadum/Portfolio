@@ -20,19 +20,19 @@ export const Contact = () => {
               <div class="lg:col-span-5 space-y-10 sm:space-y-16 animate-slide-up">
                   <div class="space-y-6 sm:space-y-8">
                      <h3 class="text-xs sm:text-sm font-black uppercase tracking-[0.2em] sm:tracking-[0.3em] text-text-secondary/40 text-center lg:text-left">Digital Footprint</h3>
-                     <div class="grid grid-cols-2 gap-4 sm:gap-6">
+                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                         ${[
                           { logo: 'https://skillicons.dev/icons?i=linkedin', label: 'LinkedIn', value: 'Vaishnavi M.', url: 'https://www.linkedin.com/in/vaishnavi-magadum-60a08633a' },
                           { logo: 'https://skillicons.dev/icons?i=github', label: 'GitHub', value: 'VaishnaviMagadum', url: 'https://github.com/VaishnaviMagadum' },
-                          { logo: 'https://skillicons.dev/icons?i=instagram', label: 'Instagram', value: 'vaish_magadum', url: 'https://instagram.com/vaish_magadum' },
-                          { logo: 'https://skillicons.dev/icons?i=gmail', label: 'Email', value: 'vaishnavimagadum04@gmail.com', url: 'mailto:vaishnavimagadum04@gmail.com' }
+                          { logo: 'https://skillicons.dev/icons?i=gmail', label: 'Email', value: 'vaishnavimagadum04@gmail.com', url: 'mailto:vaishnavimagadum04@gmail.com' },
+                          { icon: 'phone', label: 'Phone', value: '+91 9110868489', url: 'tel:+919110868489' }
                         ].map(social => `
-                           <a href="${social.url}" target="_blank" class="glass-card p-6 sm:p-10 rounded-[2.5rem] sm:rounded-[3.5rem] flex flex-col items-center justify-center gap-4 sm:gap-6 group hover:-translate-y-2 hover:bg-white/[0.02] transition-all duration-300">
-                              <div class="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-white/5 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
-                                 <img src="${social.logo}" alt="${social.label}" class="w-6 h-6 sm:w-8 sm:h-8 object-contain drop-shadow-md" />
+                           <a href="${social.url}" ${social.url.startsWith('http') ? 'target="_blank"' : ''} class="glass-card p-5 sm:p-6 rounded-[2rem] flex flex-col items-center justify-center gap-3 group hover:-translate-y-1 hover:bg-white/[0.03] transition-all duration-300">
+                              <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-110">
+                                 ${social.logo ? `<img src="${social.logo}" alt="${social.label}" class="w-6 h-6 object-contain drop-shadow-md" />` : `<i data-lucide="${social.icon}" class="w-5 h-5 text-accent-cyan"></i>`}
                               </div>
                               <div class="text-center w-full overflow-hidden">
-                                 <span class="block text-[8px] sm:text-[10px] font-black uppercase tracking-widest text-text-secondary/30 mb-1 sm:mb-2">${social.label}</span>
+                                 <span class="block text-[8px] sm:text-[9px] font-black uppercase tracking-widest text-text-secondary/40 mb-1">${social.label}</span>
                                  <span class="text-[10px] sm:text-xs font-bold text-text-primary transition-colors truncate w-full block opacity-80 group-hover:opacity-100">${social.value}</span>
                               </div>
                            </a>
