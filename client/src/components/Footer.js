@@ -28,7 +28,7 @@ export const Footer = () => {
             </div>
             
             <div class="flex items-center gap-6 text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-               <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span> Full Stack Developer • Pune, India</div>
+               <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span> Full Stack Developer</div>
             </div>
           </div>
 
@@ -57,9 +57,9 @@ export const Footer = () => {
                </li>
                <li class="flex items-center gap-4 group">
                   <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 group-hover:text-accent-cyan transition-colors">
-                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <i data-lucide="globe" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-[10px] font-mono font-bold">Karnataka, India</span>
+                  <span class="text-[10px] font-mono font-bold">Available for Work</span>
                </li>
             </ul>
           </div>

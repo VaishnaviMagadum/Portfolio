@@ -21,10 +21,6 @@ export const Home = () => {
                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan animate-pulse"></span>
                  FULL STACK DEVELOPER
                </div>
-               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-slate-950/80 border border-white/10 text-slate-300 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em]">
-                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan"></span>
-                 LOCATION: PUNE
-               </div>
               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-accent-purple/10 border border-accent-purple/30 text-accent-purple font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] shadow-[0_0_20_rgba(168,85,247,0.1)]">
                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-purple animate-pulse"></span>
                 STATUS: OPEN_TO_WORK

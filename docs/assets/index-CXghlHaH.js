@@ -91,7 +91,7 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
             </div>
             
             <div class="flex items-center gap-6 text-[10px] font-mono text-slate-500 uppercase tracking-widest">
-               <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span> Full Stack Developer • Pune, India</div>
+               <div class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span> Full Stack Developer</div>
             </div>
           </div>
 
@@ -120,9 +120,9 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
                </li>
                <li class="flex items-center gap-4 group">
                   <div class="w-8 h-8 rounded-lg bg-white/5 flex items-center justify-center text-slate-400 group-hover:text-accent-cyan transition-colors">
-                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                    <i data-lucide="globe" class="w-4 h-4"></i>
                   </div>
-                  <span class="text-[10px] font-mono font-bold">Karnataka, India</span>
+                  <span class="text-[10px] font-mono font-bold">Available for Work</span>
                </li>
             </ul>
           </div>
@@ -149,10 +149,6 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
                <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-slate-950/80 border border-accent-cyan/30 text-accent-cyan font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] shadow-[0_0_20px_rgba(34,211,238,0.1)]">
                  <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan animate-pulse"></span>
                  FULL STACK DEVELOPER
-               </div>
-               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-slate-950/80 border border-white/10 text-slate-300 font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em]">
-                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-cyan"></span>
-                 LOCATION: PUNE
                </div>
               <div class="inline-flex items-center justify-center gap-4 px-4 sm:px-6 py-2 rounded-xl bg-accent-purple/10 border border-accent-purple/30 text-accent-purple font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.4em] shadow-[0_0_20_rgba(168,85,247,0.1)]">
                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-accent-purple animate-pulse"></span>
@@ -234,8 +230,8 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
                  <div class="text-white font-bold">FULL STACK DEV</div>
               </div>
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
-                 <div class="text-accent-cyan mb-1">LOCATION:</div>
-                 <div class="text-white font-bold text-accent-cyan">PUNE, IN</div>
+                 <div class="text-accent-cyan mb-1">FOCUS:</div>
+                 <div class="text-white font-bold text-accent-cyan">WEB & CLOUD</div>
               </div>
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
                  <div class="text-accent-purple mb-1">STATUS:</div>
@@ -257,7 +253,7 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
                 Proficient in HTML5, CSS3, JavaScript, React.js, Node.js, Express.js, SQL, and REST APIs. Skilled in designing intuitive frontend user interfaces and robust CRUD data management systems.
               </p>
               <p>
-                Strong foundation in Java, Python, Spring Boot, Hibernate, DBMS, and Generative AI (OpenAI API, LLMs), backed by industry internship experience at VRIF Belgaum working in an Agile development environment.
+                Strong foundation in Java, Python, Spring Boot, Hibernate, DBMS, and Generative AI (OpenAI API, LLMs), backed by industry internship experience at VRIF working in an Agile development environment.
               </p>
            </div>
            
@@ -311,7 +307,7 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
          </div>
 
          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
-            ${[{title:`Full Stack Web Development`,org:`Udemy`,icon:`award`},{title:`Database Management Systems`,org:`Infosys Springboard`,icon:`database`},{title:`Full Stack Development Internship`,org:`VRIF Belgaum`,icon:`briefcase`},{title:`Python Bootcamp`,org:`Udemy`,icon:`code`}].map(e=>`
+            ${[{title:`Full Stack Web Development`,org:`Udemy`,icon:`award`},{title:`Database Management Systems`,org:`Infosys Springboard`,icon:`database`},{title:`Full Stack Development Internship`,org:`VRIF`,icon:`briefcase`},{title:`Python Bootcamp`,org:`Udemy`,icon:`code`}].map(e=>`
                <div class="glass-dashboard p-6 rounded-2xl border border-white/5 hover:border-accent-cyan/30 transition-all duration-300 group text-center flex flex-col items-center justify-center">
                   <div class="w-10 h-10 rounded-xl bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center text-accent-cyan mb-3 group-hover:scale-110 transition-transform">
                      <i data-lucide="${e.icon}" class="w-5 h-5"></i>
@@ -334,7 +330,7 @@ lucide.createIcons({icons});\``);if(r===void 0)throw Error("`createIcons()` only
             <!-- Connector Line -->
             <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-accent-cyan/50 via-accent-purple/50 to-transparent"></div>
             
-            ${[{year:`Feb 2026 – May 2026`,title:`Full Stack Developer`,org:`VRIF Belgaum`,desc:`Developed responsive web applications using React.js, Node.js, Express.js, and MySQL. Implemented REST APIs, CRUD operations, and version control with Git in an Agile environment.`},{year:`2022 – 2026`,title:`Bachelor of Engineering in Computer Science`,org:`Hirasugar Institute of Technology, Nidasoshi`,desc:`Comprehensive study of computer science engineering, data structures, and web technologies. CGPA: 8.3 / 10`},{year:`2020 – 2022`,title:`Pre-University Course (PCMB)`,org:`SDVS Sangh's PU College, Sankeshwar`,desc:`Focused on Physics, Chemistry, Mathematics, and Biology. Percentage: 87.33%`},{year:`2020`,title:`Secondary Education (SSLC)`,org:`SD High School, Sankeshwar`,desc:`Completed secondary education with distinction. Percentage: 83.68%`}].map(e=>`
+            ${[{year:`Feb 2026 – May 2026`,title:`Full Stack Developer`,org:`VRIF`,desc:`Developed responsive web applications using React.js, Node.js, Express.js, and MySQL. Implemented REST APIs, CRUD operations, and version control with Git in an Agile environment.`},{year:`2022 – 2026`,title:`Bachelor of Engineering in Computer Science`,org:`Hirasugar Institute of Technology`,desc:`Comprehensive study of computer science engineering, data structures, and web technologies. CGPA: 8.3 / 10`},{year:`2020 – 2022`,title:`Pre-University Course (PCMB)`,org:`SDVS Sangh's PU College`,desc:`Focused on Physics, Chemistry, Mathematics, and Biology. Percentage: 87.33%`},{year:`2020`,title:`Secondary Education (SSLC)`,org:`SD High School`,desc:`Completed secondary education with distinction. Percentage: 83.68%`}].map(e=>`
                <div class="relative glass-dashboard p-6 sm:p-8 neon-border flex flex-col md:flex-row gap-6 sm:gap-8 items-start group hover:bg-white/5 transition-all ml-8 md:ml-0">
                   <div class="text-[9px] sm:text-[10px] font-mono font-bold text-accent-cyan bg-accent-cyan/10 px-3 sm:px-4 py-1.5 rounded-full border border-accent-cyan/30 tracking-widest uppercase mb-2 md:mb-0 whitespace-nowrap">
                      ${e.year}

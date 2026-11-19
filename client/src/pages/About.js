@@ -39,8 +39,8 @@ export const About = () => {
                  <div class="text-white font-bold">FULL STACK DEV</div>
               </div>
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
-                 <div class="text-accent-cyan mb-1">LOCATION:</div>
-                 <div class="text-white font-bold text-accent-cyan">PUNE, IN</div>
+                 <div class="text-accent-cyan mb-1">FOCUS:</div>
+                 <div class="text-white font-bold text-accent-cyan">WEB & CLOUD</div>
               </div>
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
                  <div class="text-accent-purple mb-1">STATUS:</div>
@@ -62,7 +62,7 @@ export const About = () => {
                 Proficient in HTML5, CSS3, JavaScript, React.js, Node.js, Express.js, SQL, and REST APIs. Skilled in designing intuitive frontend user interfaces and robust CRUD data management systems.
               </p>
               <p>
-                Strong foundation in Java, Python, Spring Boot, Hibernate, DBMS, and Generative AI (OpenAI API, LLMs), backed by industry internship experience at VRIF Belgaum working in an Agile development environment.
+                Strong foundation in Java, Python, Spring Boot, Hibernate, DBMS, and Generative AI (OpenAI API, LLMs), backed by industry internship experience at VRIF working in an Agile development environment.
               </p>
            </div>
            
@@ -144,7 +144,7 @@ export const About = () => {
             ${[
                { title: 'Full Stack Web Development', org: 'Udemy', icon: 'award' },
                { title: 'Database Management Systems', org: 'Infosys Springboard', icon: 'database' },
-               { title: 'Full Stack Development Internship', org: 'VRIF Belgaum', icon: 'briefcase' },
+               { title: 'Full Stack Development Internship', org: 'VRIF', icon: 'briefcase' },
                { title: 'Python Bootcamp', org: 'Udemy', icon: 'code' }
             ].map(cert => `
                <div class="glass-dashboard p-6 rounded-2xl border border-white/5 hover:border-accent-cyan/30 transition-all duration-300 group text-center flex flex-col items-center justify-center">
@@ -173,25 +173,25 @@ export const About = () => {
                { 
                   year: 'Feb 2026 – May 2026', 
                   title: 'Full Stack Developer', 
-                  org: 'VRIF Belgaum', 
+                  org: 'VRIF', 
                   desc: 'Developed responsive web applications using React.js, Node.js, Express.js, and MySQL. Implemented REST APIs, CRUD operations, and version control with Git in an Agile environment.' 
                },
                { 
                   year: '2022 – 2026', 
                   title: 'Bachelor of Engineering in Computer Science', 
-                  org: 'Hirasugar Institute of Technology, Nidasoshi', 
+                  org: 'Hirasugar Institute of Technology', 
                   desc: 'Comprehensive study of computer science engineering, data structures, and web technologies. CGPA: 8.3 / 10' 
                },
                { 
                   year: '2020 – 2022', 
                   title: 'Pre-University Course (PCMB)', 
-                  org: "SDVS Sangh's PU College, Sankeshwar", 
+                  org: "SDVS Sangh's PU College", 
                   desc: 'Focused on Physics, Chemistry, Mathematics, and Biology. Percentage: 87.33%' 
                },
                { 
                   year: '2020', 
                   title: 'Secondary Education (SSLC)', 
-                  org: 'SD High School, Sankeshwar', 
+                  org: 'SD High School', 
                   desc: 'Completed secondary education with distinction. Percentage: 83.68%' 
                }
             ].map(item => `
