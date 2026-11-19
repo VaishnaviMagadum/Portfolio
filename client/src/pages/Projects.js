@@ -9,7 +9,6 @@ const staticProjects = [
     icon: 'clock',
     image: './projects/med_reminder.png',
     link: 'https://medicine-reminder-zc9o.onrender.com/login',
-    internalLink: '/med-reminder/dashboard',
     hideCode: true,
     status: 'OPERATIONAL'
   },
@@ -20,13 +19,12 @@ const staticProjects = [
     icon: 'brain',
     image: './projects/ai_prep.png',
     link: 'https://vaishnavimagadum.github.io/Placement-AI/',
-    internalLink: '/placement-ai',
     status: 'OPERATIONAL'
   },
   { 
     title: 'PARK TICKETING SYSTEM', 
     desc: 'Robust ticketing management system capable of handling 100+ visitor bookings with automated payment, ride pricing, and visitor tracking features.', 
-    tech: ['PHP', 'MYSQL', 'JAVASCRIPT', 'JQUERY', 'AJAX', 'BOOTSTRAP'], 
+    tech: ['PHP', 'MYSQL', 'JQUERY', 'AJAX', 'BOOTSTRAP'], 
     icon: 'ticket',
     image: './projects/park_ticket.jpg',
     link: 'https://theme-park-ticketing-system.onrender.com',
@@ -36,62 +34,42 @@ const staticProjects = [
 
 const defaultRepos = [
   {
-    name: 'Placement-AI',
-    description: 'AI-Powered Placement Preparation platform featuring mock tests, resume evaluation, and HR interview simulations.',
-    html_url: 'https://github.com/VaishnaviMagadum/Placement-AI',
-    language: 'JavaScript',
-    stargazers_count: 3
-  },
-  {
     name: 'Portfolio',
     description: 'High-end developer portfolio designed as an interactive futuristic AI Dashboard with Glassmorphism and Vite.',
     html_url: 'https://github.com/VaishnaviMagadum/Portfolio',
-    language: 'JavaScript',
     stargazers_count: 5
   },
   {
-    name: 'Medicine-Reminder',
-    description: 'Full-stack medication scheduling SPA with daily dose alerts, health analytics, and CRUD management.',
-    html_url: 'https://github.com/VaishnaviMagadum',
-    language: 'React.js',
+    name: 'Placement-AI',
+    description: 'AI-Powered Placement Preparation platform featuring mock tests, resume evaluation, and HR interview simulations.',
+    html_url: 'https://github.com/VaishnaviMagadum/Placement-AI',
+    stargazers_count: 3
+  },
+  {
+    name: 'theme-park-ticketing-system',
+    description: 'Amusement park booking system capable of handling automated ticket generation, ride pricing, and visitor tracking.',
+    html_url: 'https://github.com/VaishnaviMagadum/theme-park-ticketing-system',
     stargazers_count: 2
   },
   {
-    name: 'Theme-Park-Ticketing',
-    description: 'Amusement park booking system capable of handling automated ticket generation, ride pricing, and reporting.',
-    html_url: 'https://github.com/VaishnaviMagadum',
-    language: 'PHP',
+    name: 'medicine-reminder',
+    description: 'Full-stack medication scheduling application with daily dose alerts, health analytics, and regimen tracking.',
+    html_url: 'https://github.com/VaishnaviMagadum/medicine-reminder',
     stargazers_count: 2
   },
   {
-    name: 'FullStack-Web-Development',
-    description: 'Full-stack web application modules, RESTful API endpoints, and relational database schemas.',
-    html_url: 'https://github.com/VaishnaviMagadum',
-    language: 'Node.js',
+    name: 'store-rating-system',
+    description: 'Store rating and feedback management system with interactive customer reviews and analytics.',
+    html_url: 'https://github.com/VaishnaviMagadum/store-rating-system',
     stargazers_count: 1
   },
   {
-    name: 'Python-Bootcamp-Projects',
-    description: 'Data structures, algorithm implementations, problem-solving challenges, and automation scripts.',
-    html_url: 'https://github.com/VaishnaviMagadum',
-    language: 'Python',
+    name: 'Park_ticketing_system',
+    description: 'Ticketing and ride pricing system for theme park management and visitor registration.',
+    html_url: 'https://github.com/VaishnaviMagadum/Park_ticketing_system',
     stargazers_count: 2
   }
 ];
-
-const getLangColor = (lang) => {
-  const map = {
-    'JavaScript': 'bg-yellow-400',
-    'React.js': 'bg-cyan-400',
-    'Python': 'bg-emerald-400',
-    'PHP': 'bg-indigo-400',
-    'HTML': 'bg-orange-500',
-    'Node.js': 'bg-green-500',
-    'TypeScript': 'bg-blue-400',
-    'Java': 'bg-red-400'
-  };
-  return map[lang] || 'bg-accent-cyan';
-};
 
 export const Projects = () => {
   const container = document.createElement('div');
@@ -148,10 +126,6 @@ export const Projects = () => {
                        <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono font-bold text-accent-cyan hover:tracking-widest transition-all">
                           View Project <i data-lucide="external-link" class="w-3 h-3"></i>
                        </a>
-                       ${project.internalLink ? `
-                       <a href="${project.internalLink}" class="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono font-bold text-accent-purple hover:text-white transition-all bg-accent-purple/10 border border-accent-purple/20 px-2 py-0.5 rounded hover:bg-accent-purple/30">
-                          Demo Preview <i data-lucide="arrow-right" class="w-3 h-3"></i>
-                       </a>` : ''}
                     </div>
                  </div>
                </div>
@@ -172,8 +146,6 @@ export const Projects = () => {
             <div id="repo-grid" class="max-w-6xl mx-auto px-2">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                     ${displayRepos.map(repo => {
-                        const lang = repo.language || 'Code';
-                        const colorClass = getLangColor(lang);
                         const stars = repo.stargazers_count ?? repo.stars ?? 1;
                         return `
                         <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="glass-dashboard p-5 sm:p-6 hover:bg-white/5 hover:border-accent-cyan/40 transition-all duration-300 group neon-border flex flex-col justify-between rounded-2xl">
@@ -186,8 +158,8 @@ export const Projects = () => {
                                       </svg>
                                    </div>
                                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[8px] font-mono font-bold text-slate-400">
-                                      <span class="w-1.5 h-1.5 rounded-full ${colorClass}"></span>
-                                      ${lang.toUpperCase()}
+                                      <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan"></span>
+                                      REPOSITORY
                                    </span>
                                 </div>
                                 <h4 class="text-xs sm:text-sm font-mono font-bold text-white mb-2 group-hover:text-accent-cyan transition-colors truncate">${repo.name}</h4>

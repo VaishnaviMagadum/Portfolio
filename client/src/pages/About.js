@@ -29,7 +29,7 @@ export const About = () => {
               </div>
            </div>
            
-           <div class="mt-8 grid grid-cols-1 xs:grid-cols-2 gap-3 sm:gap-4 w-full max-w-sm sm:max-w-md font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-slate-500">
+           <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 w-full max-w-sm sm:max-w-md font-mono text-[8px] sm:text-[9px] uppercase tracking-widest text-slate-500">
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
                  <div class="text-accent-cyan mb-1">DEVELOPER_ID:</div>
                  <div class="text-white">VAISHNAVI_M</div>
@@ -37,10 +37,6 @@ export const About = () => {
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
                  <div class="text-accent-purple mb-1">ROLE:</div>
                  <div class="text-white font-bold">FULL STACK DEV</div>
-              </div>
-              <div class="p-3 sm:p-4 glass-dashboard border-white/5">
-                 <div class="text-accent-cyan mb-1">FOCUS:</div>
-                 <div class="text-white font-bold text-accent-cyan">WEB & CLOUD</div>
               </div>
               <div class="p-3 sm:p-4 glass-dashboard border-white/5">
                  <div class="text-accent-purple mb-1">STATUS:</div>
