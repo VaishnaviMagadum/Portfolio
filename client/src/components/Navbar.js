@@ -18,7 +18,7 @@ export const Navbar = () => {
     navContainer.innerHTML = `
       <nav class="fixed top-2 sm:top-6 left-1/2 -translate-x-1/2 z-[100] w-[98%] sm:w-[95%] max-w-7xl transition-all duration-500">
         <div class="glass-dashboard h-14 sm:h-16 px-4 sm:px-10 flex justify-between items-center group">
-          <a href="/" class="flex items-center gap-3 group/logo">
+          <a href="#home" class="flex items-center gap-3 group/logo">
             <span class="text-lg sm:text-2xl font-mono font-bold tracking-tighter text-white whitespace-nowrap">
               Vaishnavi Magadum
             </span>
@@ -34,7 +34,7 @@ export const Navbar = () => {
               </div>
             
             ${['Home', 'About', 'Projects', 'Contact'].map(item => `
-              <a href="${item === 'Home' ? '/#home' : '/#' + item.toLowerCase()}" class="px-3 lg:px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:text-accent-cyan hover:bg-white/5 relative group/link text-slate-400">
+              <a href="#${item.toLowerCase()}" class="px-3 lg:px-4 py-1.5 rounded-xl text-xs font-mono font-bold transition-all hover:text-accent-cyan hover:bg-white/5 relative group/link text-slate-400">
                 ${item.toUpperCase()}
               </a>
             `).join('')}
@@ -59,7 +59,7 @@ export const Navbar = () => {
         <div id="mobile-menu" class="fixed inset-0 z-[-1] glass sm:mt-24 md:hidden transition-all duration-500 ${isMobileMenuOpen ? 'translate-y-0 opacity-100 backdrop-blur-3xl' : '-translate-y-full opacity-0 pointer-events-none'}">
           <div class="container mx-auto px-6 pt-32 pb-12 flex flex-col gap-4">
             ${['Home', 'About', 'Projects', 'Contact'].map(item => `
-              <a href="${item === 'Home' ? '/#home' : '/#' + item.toLowerCase()}" class="mobile-nav-link text-3xl font-display font-bold flex items-center justify-between p-4 rounded-3xl hover:bg-white/5 group border border-transparent hover:border-white/5">
+              <a href="#${item.toLowerCase()}" class="mobile-nav-link text-3xl font-display font-bold flex items-center justify-between p-4 rounded-3xl hover:bg-white/5 group border border-transparent hover:border-white/5">
                 ${item}
                 <i data-lucide="chevron-right" class="w-8 h-8 text-primary-500 -translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all"></i>
               </a>
@@ -67,7 +67,7 @@ export const Navbar = () => {
             
             <div class="h-px bg-white/10 my-4"></div>
             
-            <a href="/#contact" class="w-full flex items-center justify-center gap-3 p-6 rounded-3xl bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold text-xl active:scale-95 shadow-[0_10px_30px_-10px_rgba(var(--primary),0.5)] border border-primary-400/20">
+            <a href="#contact" class="w-full flex items-center justify-center gap-3 p-6 rounded-3xl bg-gradient-to-r from-primary-600 to-primary-500 text-white font-bold text-xl active:scale-95 shadow-[0_10px_30px_-10px_rgba(var(--primary),0.5)] border border-primary-400/20">
               <i data-lucide="briefcase" class="w-6 h-6"></i>
               Hire Me
             </a>

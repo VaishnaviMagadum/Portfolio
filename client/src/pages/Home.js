@@ -47,12 +47,12 @@ export const Home = () => {
           </p>
           
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 pt-4 sm:pt-8 animate-fade-in opacity-0 w-full px-6" style="animation-delay: 0.8s">
-             <a href="/#projects" class="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan font-mono font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-accent-cyan/20 transition-all neon-border text-center">
+             <a href="#projects" class="group relative w-full sm:w-auto px-8 sm:px-12 py-4 sm:py-5 rounded-xl bg-accent-cyan/10 border border-accent-cyan/30 text-accent-cyan font-mono font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:bg-accent-cyan/20 transition-all neon-border text-center">
                View My Work
                <span class="absolute -top-1 -right-1 w-2 h-2 bg-accent-cyan rounded-full animate-ping"></span>
              </a>
              
-             <a href="/VaishnaviMagadum.pdf" target="_blank" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-xl border border-white/5 bg-white/5 text-slate-400 font-mono font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:text-white hover:bg-white/10 transition-all text-center">
+             <a href="./VaishnaviMagadum.pdf" target="_blank" class="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 rounded-xl border border-white/5 bg-white/5 text-slate-400 font-mono font-bold text-[10px] sm:text-xs uppercase tracking-widest hover:text-white hover:bg-white/10 transition-all text-center">
                Download CV
              </a>
           </div>

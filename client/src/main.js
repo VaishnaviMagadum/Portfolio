@@ -21,6 +21,12 @@ const iconCollection = icons;
 const routes = {
   '/': MainLayout,
   '/index.html': MainLayout,
+  '/portfolio': MainLayout,
+  '/portfolio/': MainLayout,
+  '/portfolio/index.html': MainLayout,
+  '/Portfolio': MainLayout,
+  '/Portfolio/': MainLayout,
+  '/Portfolio/index.html': MainLayout,
   '/about': MainLayout,
   '/projects': MainLayout,
   '/contact': MainLayout,

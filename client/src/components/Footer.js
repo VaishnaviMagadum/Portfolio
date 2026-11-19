@@ -10,7 +10,7 @@ export const Footer = () => {
         <div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-20">
           <!-- Main Branding Column -->
           <div class="col-span-1 md:col-span-2 space-y-8">
-            <a href="/" class="text-2xl font-mono font-bold tracking-tighter text-white group block">
+            <a href="#home" class="text-2xl font-mono font-bold tracking-tighter text-white group block">
               Vaishnavi Magadum
             </a>
             
@@ -37,7 +37,7 @@ export const Footer = () => {
             <ul class="space-y-4">
               ${['Home', 'About', 'Projects', 'Contact'].map(link => `
                 <li>
-                  <a href="${link === 'Home' ? '/#home' : '/#' + link.toLowerCase()}" class="text-slate-500 hover:text-accent-cyan transition-all flex items-center gap-2 group text-[10px] font-mono font-bold uppercase tracking-widest">
+                  <a href="#${link.toLowerCase()}" class="text-slate-500 hover:text-accent-cyan transition-all flex items-center gap-2 group text-[10px] font-mono font-bold uppercase tracking-widest">
                     <span class="opacity-0 group-hover:opacity-100 transition-all text-accent-cyan">>></span>
                     ${link}
                   </a>
