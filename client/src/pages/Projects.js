@@ -7,7 +7,7 @@ const staticProjects = [
     desc: 'Full-stack platform enabling users to browse stores, submit ratings and reviews, with secure authentication and administrative store analytics.', 
     tech: ['REACT_JS', 'NODE_JS', 'EXPRESS_JS', 'MYSQL', 'SEQUELIZE', 'JWT_AUTH'], 
     icon: 'star',
-    image: './projects/store_rating.jpg',
+    image: './projects/storerater_preview.jpg',
     link: 'https://store-rating-system-iota.vercel.app/login'
   },
   { 
