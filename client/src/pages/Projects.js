@@ -7,7 +7,7 @@ const staticProjects = [
     desc: 'Full-stack healthcare application for medication management, scheduling, reminder notifications, inventory tracking, and interactive wellness monitoring.', 
     tech: ['REACT_JS', 'NODE_JS', 'EXPRESS_JS', 'JWT_AUTH', 'TAILWIND_CSS'], 
     icon: 'clock',
-    image: '/projects/med_reminder.png',
+    image: './projects/med_reminder.png',
     link: 'https://medicine-reminder-zc9o.onrender.com/login',
     internalLink: '/med-reminder/dashboard',
     hideCode: true,
@@ -18,7 +18,7 @@ const staticProjects = [
     desc: 'AI-powered placement platform featuring 4+ modules including mock tests, AI resume evaluation, company recommendations, and interactive HR simulations.', 
     tech: ['JS_CORE', 'OPENAI_API', 'BOOTSTRAP', 'WEB_SPEECH', 'GIT'], 
     icon: 'brain',
-    image: '/projects/ai_prep.png',
+    image: './projects/ai_prep.png',
     link: 'https://vaishnavimagadum.github.io/Placement-AI/',
     internalLink: '/placement-ai',
     status: 'OPERATIONAL'
@@ -28,7 +28,7 @@ const staticProjects = [
     desc: 'Robust ticketing management system capable of handling 100+ visitor bookings with automated payment, ride pricing, and visitor tracking features.', 
     tech: ['PHP', 'MYSQL', 'JAVASCRIPT', 'JQUERY', 'AJAX', 'BOOTSTRAP'], 
     icon: 'ticket',
-    image: '/projects/park_ticket.jpg',
+    image: './projects/park_ticket.jpg',
     link: 'https://theme-park-ticketing-system.onrender.com',
     status: 'STABLE'
   }
@@ -138,7 +138,7 @@ export const Projects = () => {
                       <div class="relative aspect-video rounded-xl overflow-hidden border border-white/5 group-hover:border-accent-cyan/30 transition-all duration-500 mt-2">
                          <img src="${project.image}" 
                               alt="${project.title}" 
-                              onerror="this.src= '${project.title.includes('PARK') ? 'https://images.unsplash.com/photo-1513889959010-683a37c4ed44?auto=format&fit=crop&q=80&w=800' : '/projects/placeholder.png'}'; this.onerror=null;"
+                              onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800';"
                               class="w-full h-full object-cover">
                          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
                       </div>

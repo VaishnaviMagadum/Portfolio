@@ -24,7 +24,7 @@ export const About = () => {
               
               <!-- Central Profile Image -->
               <div class="relative w-full h-full rounded-xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition-all duration-700">
-                 <img src="/profile.jpg" alt="Vaishnavi Magadum" class="w-full h-full object-cover">
+                 <img src="./profile.jpg" alt="Vaishnavi Magadum" onerror="this.onerror=null; this.src='./profile.png';" class="w-full h-full object-cover">
                  <div class="absolute inset-0 bg-accent-cyan/5 mix-blend-overlay"></div>
               </div>
            </div>

@@ -44,7 +44,7 @@ export const MedReminderDashboard = () => {
                         <div class="carousel-track" id="med-carousel-track">
                             <div class="carousel-slide bg-indigo-600">
                                 <div class="slide-content flex flex-col sm:flex-row items-center justify-center sm:justify-around w-full max-w-4xl px-6 sm:px-12 py-10 sm:py-0 gap-8 sm:gap-0">
-                                    <img src="/assets/med-reminder/pill.png" class="w-24 h-24 sm:w-44 sm:h-44 drop-shadow-2xl animate-float">
+                                    <img src="./assets/med-reminder/pill.png" class="w-24 h-24 sm:w-44 sm:h-44 drop-shadow-2xl animate-float">
                                     <div class="text-white text-center sm:text-left">
                                         <h2 class="text-2xl sm:text-4xl font-extrabold mb-2 sm:mb-4">Never Miss a Dose</h2>
                                         <p class="text-sm sm:text-lg opacity-90 mb-4 sm:mb-6">Real-time scheduling with smart time-slot reminders.</p>
@@ -54,7 +54,7 @@ export const MedReminderDashboard = () => {
                             </div>
                             <div class="carousel-slide bg-emerald-600">
                                 <div class="slide-content flex flex-col sm:flex-row items-center justify-center sm:justify-around w-full max-w-4xl px-6 sm:px-12 py-10 sm:py-0 gap-8 sm:gap-0">
-                                    <img src="/assets/med-reminder/bottle.png" class="w-24 h-24 sm:w-44 sm:h-44 drop-shadow-2xl animate-float">
+                                    <img src="./assets/med-reminder/bottle.png" class="w-24 h-24 sm:w-44 sm:h-44 drop-shadow-2xl animate-float">
                                     <div class="text-white text-center sm:text-left">
                                         <h2 class="text-2xl sm:text-4xl font-extrabold mb-2 sm:mb-4">Adherence & Analytics</h2>
                                         <p class="text-sm sm:text-lg opacity-90 mb-4 sm:mb-6">Comprehensive tracking across morning, afternoon, and night regimens.</p>
@@ -222,7 +222,7 @@ export const MedReminderDashboard = () => {
                 listEl.innerHTML = `
                     <div class="col-span-full py-12 px-6 text-center bg-white rounded-3xl border border-slate-100 shadow-sm">
                         <div class="w-16 h-16 mx-auto mb-4 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-500">
-                            <img src="/assets/med-reminder/med_bottle_illustration.svg" class="w-8 h-8 opacity-60" alt="empty">
+                            <img src="./assets/med-reminder/med_bottle_illustration.svg" class="w-8 h-8 opacity-60" alt="empty">
                         </div>
                         <h4 class="text-lg font-bold text-slate-800 mb-1">No Medications Scheduled</h4>
                         <p class="text-slate-400 text-sm mb-6 max-w-md mx-auto">Get started by loading our recommended sample prescriptions or adding your own medication.</p>
@@ -243,7 +243,7 @@ export const MedReminderDashboard = () => {
                     <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm relative group hover:shadow-xl hover:border-indigo-100 transition-all">
                         <div class="flex justify-between items-start mb-4">
                             <div class="w-12 h-12 rounded-2xl bg-slate-50 flex items-center justify-center p-2 border border-slate-100">
-                                <img src="${i % 2 === 0 ? '/assets/med-reminder/pill.png' : '/assets/med-reminder/bottle.png'}" class="w-full h-full object-contain">
+                                <img src="${i % 2 === 0 ? './assets/med-reminder/pill.png' : './assets/med-reminder/bottle.png'}" class="w-full h-full object-contain">
                             </div>
                             <span class="bg-indigo-50 text-indigo-600 px-3 py-1 rounded-full text-xs font-bold border border-indigo-100">
                                 ⏰ ${m.reminder_time || '08:00 AM'}
