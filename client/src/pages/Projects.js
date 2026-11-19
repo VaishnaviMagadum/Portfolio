@@ -3,14 +3,21 @@ import axios from 'axios';
 
 const staticProjects = [
   { 
+    title: 'STORE RATING SYSTEM', 
+    desc: 'Full-stack platform enabling users to browse stores, submit ratings and reviews, with secure authentication and administrative store analytics.', 
+    tech: ['REACT_JS', 'NODE_JS', 'EXPRESS_JS', 'MYSQL', 'SEQUELIZE', 'JWT_AUTH'], 
+    icon: 'star',
+    image: './projects/store_rating.svg',
+    link: 'https://store-rating-system-iota.vercel.app/login'
+  },
+  { 
     title: 'MEDICINE REMINDER SYSTEM', 
     desc: 'Full-stack healthcare application for medication management, scheduling, reminder notifications, inventory tracking, and interactive wellness monitoring.', 
     tech: ['REACT_JS', 'NODE_JS', 'EXPRESS_JS', 'JWT_AUTH', 'TAILWIND_CSS'], 
     icon: 'clock',
     image: './projects/med_reminder.png',
     link: 'https://medicine-reminder-zc9o.onrender.com/login',
-    hideCode: true,
-    status: 'OPERATIONAL'
+    hideCode: true
   },
   { 
     title: 'AI BASED PLACEMENT PREP', 
@@ -18,8 +25,7 @@ const staticProjects = [
     tech: ['JS_CORE', 'OPENAI_API', 'BOOTSTRAP', 'WEB_SPEECH', 'GIT'], 
     icon: 'brain',
     image: './projects/ai_prep.png',
-    link: 'https://vaishnavimagadum.github.io/Placement-AI/',
-    status: 'OPERATIONAL'
+    link: 'https://vaishnavimagadum.github.io/Placement-AI/'
   },
   { 
     title: 'PARK TICKETING SYSTEM', 
@@ -27,8 +33,7 @@ const staticProjects = [
     tech: ['PHP', 'MYSQL', 'JQUERY', 'AJAX', 'BOOTSTRAP'], 
     icon: 'ticket',
     image: './projects/park_ticket.jpg',
-    link: 'https://theme-park-ticketing-system.onrender.com',
-    status: 'STABLE'
+    link: 'https://theme-park-ticketing-system.onrender.com'
   }
 ];
 
@@ -88,7 +93,7 @@ export const Projects = () => {
         </div>
 
         <!-- Featured Projects Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 sm:gap-8 max-w-7xl mx-auto">
            ${staticProjects.map(project => `
                <div class="group glass-dashboard neon-border p-1 hover:scale-[1.02] transition-all duration-500 flex flex-col justify-between">
                  <div class="p-4 sm:p-6 space-y-4 sm:space-y-5 relative z-10 flex flex-col justify-between h-full">
@@ -96,9 +101,6 @@ export const Projects = () => {
                       <div class="flex justify-between items-start mb-4">
                          <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-accent-cyan/10 border border-accent-cyan/20 flex items-center justify-center text-accent-cyan group-hover:bg-accent-cyan group-hover:text-slate-950 transition-all duration-500">
                             <i data-lucide="${project.icon || 'layers'}" class="w-5 h-5 sm:w-6 sm:h-6"></i>
-                         </div>
-                         <div class="text-[8px] sm:text-[9px] font-mono font-bold text-slate-500 flex items-center gap-2">
-                            STATUS: <span class="${project.status === 'OPERATIONAL' ? 'text-accent-cyan' : 'text-accent-purple'}">${project.status}</span>
                          </div>
                       </div>
 
